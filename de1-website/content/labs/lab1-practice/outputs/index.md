@@ -1,0 +1,4 @@
+---
+title: outputs
+publish: true
+---

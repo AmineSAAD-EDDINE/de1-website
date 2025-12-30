@@ -1,0 +1,4 @@
+---
+title: proof
+publish: true
+---
