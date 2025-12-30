@@ -3,10 +3,10 @@ title: lab3-practice
 publish: true
 ---
 
-# Lab3 Practice
+# Lab 3 Practice
 
 
-## Outputs
+## Output
 
 - [lab3_metrics_log.csv](lab3_metrics_log.csv)
 
