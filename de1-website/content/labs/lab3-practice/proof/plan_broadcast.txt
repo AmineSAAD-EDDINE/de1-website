@@ -1,0 +1,16 @@
+2025-12-30 13:28:35.566170
+AdaptiveSparkPlan isFinalPlan=false
++- Sort [total_n#1119L DESC NULLS LAST], true, 0
+   +- Exchange rangepartitioning(total_n#1119L DESC NULLS LAST, 200), ENSURE_REQUIREMENTS, [plan_id=274]
+      +- HashAggregate(keys=[curr_category#1000], functions=[sum(n#657)], output=[curr_category#1000, total_n#1119L])
+         +- Exchange hashpartitioning(curr_category#1000, 200), ENSURE_REQUIREMENTS, [plan_id=271]
+            +- HashAggregate(keys=[curr_category#1000], functions=[partial_sum(n#657)], output=[curr_category#1000, sum#1235L])
+               +- Project [n#657, curr_category#1000]
+                  +- BroadcastHashJoin [curr_title#655], [curr_title#999], LeftOuter, BuildRight, false
+                     :- InMemoryTableScan [curr_title#655, n#657]
+                     :     +- InMemoryRelation [prev_title#654, curr_title#655, type#656, n#657, ts#658, year#659, month#660], StorageLevel(disk, memory, deserialized, 1 replicas)
+                     :           +- *(1) ColumnarToRow
+                     :              +- FileScan parquet [prev_title#654,curr_title#655,type#656,n#657,ts#658,year#659,month#660] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/lab3-practice/outputs/la..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<prev_title:string,curr_title:string,type:string,n:int,ts:timestamp>
+                     +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, false]),false), [plan_id=266]
+                        +- Filter isnotnull(curr_title#999)
+                           +- FileScan csv [curr_title#999,curr_category#1000] Batched: false, DataFilters: [isnotnull(curr_title#999)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/lab3_dim_curr_category.csv], PartitionFilters: [], PushedFilters: [IsNotNull(curr_title)], ReadSchema: struct<curr_title:string,curr_category:string>
