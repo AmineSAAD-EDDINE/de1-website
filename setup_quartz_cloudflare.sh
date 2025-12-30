@@ -26,7 +26,7 @@ ACCESS_HOST="$PROJ.pages.dev"
 # ====== PATHS ======
 export SITE_DIR="$HOME/de1-website/$REPO"
 export ROOT="$HOME/de1-website"
-export SRC_TREE="$ROOT/DE1"          # source tree containing labs-final, project-final, ...
+export SRC_TREE="$ROOT/de1-website"          # source tree containing labs-final, project-final, ...
 export NOTEBOOK_SRC="${NOTEBOOK_SRC:-}"
 export NB_STATIC="$SITE_DIR/quartz/static/nb"     # notebooks HTML root (Static plugin serves at /static/nb/...)
 export NB_INDEX_MD="$SITE_DIR/content/notebooks.md"
