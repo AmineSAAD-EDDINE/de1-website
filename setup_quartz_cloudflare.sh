@@ -26,7 +26,8 @@ ACCESS_HOST="$PROJ.pages.dev"
 # ====== PATHS ======
 export SITE_DIR="$HOME/de1-website/$REPO"
 export ROOT="$HOME/de1-website"
-export SRC_TREE="$ROOT/de1-website"          # source tree containing labs-final, project-final, ...
+export PATH="$ROOT:$PATH"
+export SRC_TREE="$ROOT/de1-website/docs"          # source tree containing labs-final, project-final, ...
 export NOTEBOOK_SRC="${NOTEBOOK_SRC:-}"
 export NB_STATIC="$SITE_DIR/quartz/static/nb"     # notebooks HTML root (Static plugin serves at /static/nb/...)
 export NB_INDEX_MD="$SITE_DIR/content/notebooks.md"
@@ -294,7 +295,7 @@ while IFS= read -r -d '' nb; do
   rel="${nb#"$SCAN_ROOT/"}"                      # labs-final/.../X.ipynb
   outdir="$NB_HTML_ROOT/$(dirname "$rel")"
   mkdir -p "$outdir"
-  jupyter nbconvert --to html --output-dir "$outdir" "$nb"
+  python -m nbconvert --to html --output-dir "$outdir" "$nb"
 done
  
 # 6.2 create one Markdown wrapper per notebook with URL-encoded permalink + iframe
