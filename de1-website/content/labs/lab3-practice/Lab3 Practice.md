@@ -1,5 +1,6 @@
 ---
 title: Lab3 Practice
+publish: true
 ---
 
 # Lab3 Practice
