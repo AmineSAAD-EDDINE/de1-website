@@ -1,7 +1,0 @@
-2025-12-30 13:19:12.569801
-
-InMemoryTableScan [id#17, category#18, value#19, text#20]
-   +- InMemoryRelation [id#17, category#18, value#19, text#20], StorageLevel(disk, memory, deserialized, 1 replicas)
-         +- Union
-            :- FileScan csv [id#17,category#18,value#19,text#20] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/lab1_dataset_a.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<id:int,category:string,value:double,text:string>
-            +- FileScan csv [id#38,category#39,value#40,text#41] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/lab1_dataset_b.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<id:int,category:string,value:double,text:string>
