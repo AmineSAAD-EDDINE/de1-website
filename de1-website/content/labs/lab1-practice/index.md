@@ -1,9 +1,7 @@
 ---
-title: lab1-practice
+title: Lab 1 Practice
 publish: true
 ---
-
-# Lab 1 Practice
 
 ## Outputs
 

@@ -1,4 +1,4 @@
 ---
-title: lab3-assignment
+title: Lab 3 Assignment
 publish: true
 ---

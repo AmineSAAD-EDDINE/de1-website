@@ -12,4 +12,3 @@ permalink: /resources
 - [Lab 2 - Assignment](/labs/lab2-assignment)
 - [Lab 3 - Practice](/labs/lab3-practice)
 - [Lab 3 - Assignment](/labs/lab3-assignment)
-

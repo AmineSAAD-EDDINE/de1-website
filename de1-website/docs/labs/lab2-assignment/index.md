@@ -1,4 +1,4 @@
 ---
-title: "lab2-assignement"
+title: Lab 2 Assignment
 publish: true
 ---

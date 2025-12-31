@@ -1,5 +1,5 @@
 ---
-title: lab2-practice
+title: Lab 2 Practice
 publish: true
 ---
 

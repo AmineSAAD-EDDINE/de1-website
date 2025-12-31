@@ -1,10 +1,7 @@
 ---
-title: lab3-practice
+title: Lab 3 Practice
 publish: true
 ---
-
-# Lab 3 Practice
-
 
 ## Output
 
