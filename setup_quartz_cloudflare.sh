@@ -2,16 +2,23 @@
 set -euo pipefail
  
 # ====== EDIT ======
+# Load .env file if it exists
+if [ -f .env ]; then
+  set -a
+  source .env
+  set +a
+fi
+
 export GH_USER="${GH_USER:-AmineSAAD-EDDINE}"    # your GitHub user/org
 export REPO="${REPO:-de1-website}"
 export PROJ="${PROJ:-de1-1778}"
 export DOMAIN="${DOMAIN:-CHANGE_ME_DOMAIN}"                 # optional custom domain
 export EMAIL_DOMAIN="${EMAIL_DOMAIN:-esiee.fr, edu.esiee.fr}" # comma-separated allowed email domains
 export ACCESS_APP_NAME="${ACCESS_APP_NAME:-de1-website}"
-export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-528ffd989ba7b0825a190b8c9c82094b}"
-export CLOUDFLARE_API_TOKEN="${CLOUDFLARE_API_TOKEN:-quW6amv4gN1s5BopaVt11qsSoPAKzwXJm5Cu4hlB}"
-export CF_ACCOUNT_ID="${CF_ACCOUNT_ID:-528ffd989ba7b0825a190b8c9c82094b}"
-export CF_API_TOKEN="${CF_API_TOKEN:-quW6amv4gN1s5BopaVt11qsSoPAKzwXJm5Cu4hlB}"
+export CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-}"
+export CLOUDFLARE_API_TOKEN="${CLOUDFLARE_API_TOKEN:-}"
+export CF_ACCOUNT_ID="${CF_ACCOUNT_ID:-}"
+export CF_API_TOKEN="${CF_API_TOKEN:-}"
  
 # ====== DO NOT EDIT BELOW STARTING THIS LINE ======
  
@@ -50,13 +57,7 @@ write_index_from_readme(){
   sed -e 's#(DE1/roadmap-labs-project-DE1\.md)#(/roadmap/roadmap-labs-project-DE1)#g' \
       -e 's#(DE1/roadmap/roadmap-labs-project-DE1\.md)#(/roadmap/roadmap-labs-project-DE1)#g' \
       "$ROOT/README.md" > "$tmp"
-  {
-    printf '%s\n' '---'
-    printf '%s\n' 'title: Home'
-    printf '%s\n' 'publish: true'
-    printf '%s\n' '---'
-    cat "$tmp"
-  } > content/index.md
+  
   rm -f "$tmp"
 }
  
