@@ -12,5 +12,5 @@ publish: true
 
 ## Proof
 
-- [plan_fact_join.txt](proof/plan_fact_join.txt)
-- [plan_ingest.txt](proof/plan_ingest.txt)
+- [plan_fact_join.txt](plan_fact_join.txt)
+- [plan_ingest.txt](plan_ingest.txt)

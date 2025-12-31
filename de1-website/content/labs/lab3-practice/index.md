@@ -12,6 +12,6 @@ publish: true
 
 ## Proof
 
-- [plan_broadcast.txt](proof/plan_broadcast.txt)
-- [plan_column.txt](proof/plan_column.txt)
-- [plan_row.txt](proof/plan_row.txt)
+- [plan_broadcast.txt](plan_broadcast.txt)
+- [plan_column.txt](plan_column.txt)
+- [plan_row.txt](plan_row.txt)

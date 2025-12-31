@@ -1,0 +1,12 @@
+2025-12-30 13:28:32.048289
+AdaptiveSparkPlan isFinalPlan=false
++- TakeOrderedAndProject(limit=50, orderBy=[n#883L DESC NULLS LAST], output=[year#659,month#660,prev_title#654,curr_title#655,n#883L])
+   +- HashAggregate(keys=[year#659, month#660, prev_title#654, curr_title#655], functions=[sum(n#657)], output=[year#659, month#660, prev_title#654, curr_title#655, n#883L])
+      +- Exchange hashpartitioning(year#659, month#660, prev_title#654, curr_title#655, 200), ENSURE_REQUIREMENTS, [plan_id=181]
+         +- HashAggregate(keys=[year#659, month#660, prev_title#654, curr_title#655], functions=[partial_sum(n#657)], output=[year#659, month#660, prev_title#654, curr_title#655, sum#998L])
+            +- Project [prev_title#654, curr_title#655, n#657, year#659, month#660]
+               +- Filter (isnotnull(type#656) AND (type#656 = link))
+                  +- InMemoryTableScan [curr_title#655, month#660, n#657, prev_title#654, type#656, year#659], [isnotnull(type#656), (type#656 = link)]
+                        +- InMemoryRelation [prev_title#654, curr_title#655, type#656, n#657, ts#658, year#659, month#660], StorageLevel(disk, memory, deserialized, 1 replicas)
+                              +- *(1) ColumnarToRow
+                                 +- FileScan parquet [prev_title#654,curr_title#655,type#656,n#657,ts#658,year#659,month#660] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/lab3-practice/outputs/la..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<prev_title:string,curr_title:string,type:string,n:int,ts:timestamp>

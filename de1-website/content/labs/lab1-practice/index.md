@@ -7,8 +7,8 @@ publish: true
 
 ## Outputs
 
-- [top10_df.csv](outputs/top10_df.csv) 
-- [top10_rdd.csv](outputs/top10_rdd.csv) 
+- [top10_df.csv](top10_df.csv) 
+- [top10_rdd.csv](top10_rdd.csv) 
 
 ---
 
@@ -16,4 +16,4 @@ publish: true
 
 ## Proof
 
-- [plan_rdd.txt](proof/plan_rdd.txt)
+- [plan_rdd.txt](plan_rdd.txt)
