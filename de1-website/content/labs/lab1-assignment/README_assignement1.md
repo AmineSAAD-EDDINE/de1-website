@@ -12,7 +12,7 @@ On a produit deux résultats :
 Les résultats sont exportés sous forme de fichiers CSV.
 
 ## Inputs
-- Dataset : `a1-brand.csv` (fourni)
+- Dataset : [a1-brand.csv](../../../quartz/static/lab1-assignment/a1-brand.csv) (fourni)
 - Stopwords : liste définie dans le notebook
 
 Les variables d’environnement SPARK_HOME et PATH ont été correctement configurées.
@@ -25,6 +25,6 @@ On a implémenté un word count minimal :
 Les deux versions suivent la même logique afin de permettre la comparaison.
 
 ## Outputs
-- `top10_words.csv` : Top-10 incluant les stopwords
-- `top10_noStopWords.csv` : Top-10 sans stopwords
+- [top10_words.csv](../../../quartz/static/lab1-assignment/top10_words.csv) : Top-10 incluant les stopwords
+- [top10_noStopWords.csv](../../../quartz/static/lab1-assignment/top10_noStopWords.csv) : Top-10 sans stopwords
 
