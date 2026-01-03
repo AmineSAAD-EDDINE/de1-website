@@ -1,5 +1,12 @@
 # Lab 3 – Row vs Column Queries and Spark Optimizations
 
+>**Students:** Maxence DELEHELLE, Amine SAAD-EDDINE   
+>**Teacher:** Badr TAJINI     
+>**Academic year:** 2025–2026  
+>**Program:** Data & Applications - Engineering - (FD)   
+>**Course:** Data Engineering I  
+---
+
 ## Objective
 Dans ce lab, on a exploré l’ingestion de données avec un schéma explicite
 et comparé l’exécution de requêtes en mode row et column.

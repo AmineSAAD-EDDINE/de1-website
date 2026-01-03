@@ -1,5 +1,12 @@
 # Assignment 1 – Report
 
+>**Students:** Maxence DELEHELLE, Amine SAAD-EDDINE   
+>**Teacher:** Badr TAJINI     
+>**Academic year:** 2025–2026  
+>**Program:** Data & Applications - Engineering - (FD)   
+>**Course:** Data Engineering I  
+---
+
 ## Objective
 L’objectif de ce travail est de lancer un environnement PySpark fonctionnel
 dans JupyterLab et de réaliser un word count simple en utilisant deux approches :

@@ -1,5 +1,12 @@
 # Lab 2 – Design Note
 
+>**Students:** Maxence DELEHELLE, Amine SAAD-EDDINE   
+>**Teacher:** Badr TAJINI     
+>**Academic year:** 2025–2026  
+>**Program:** Data & Applications - Engineering - (FD)   
+>**Course:** Data Engineering I  
+---
+
 ## Objective
 Dans ce lab, on a construit un mini data warehouse à partir des CSVs opérationnels.
 On a utilisé des schémas explicites lors de l’ingestion et construit un schéma en étoile

@@ -1,5 +1,12 @@
 # RDD vs DataFrame – Engineering Note (Lab 1)
 
+>**Students:** Maxence DELEHELLE, Amine SAAD-EDDINE   
+>**Teacher:** Badr TAJINI     
+>**Academic year:** 2025–2026  
+>**Program:** Data & Applications - Engineering - (FD)   
+>**Course:** Data Engineering I  
+---
+
 Dans ce lab, on a implémenté le même calcul de Top-N en utilisant deux approches :
 une avec les RDD et une avec les DataFrames, afin de comparer leur comportement
 et leurs implications en ingénierie des données.

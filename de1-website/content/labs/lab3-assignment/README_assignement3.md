@@ -1,5 +1,12 @@
 # Assignment 3 – Data Science and Spark Algorithms
 
+>**Students:** Maxence DELEHELLE, Amine SAAD-EDDINE   
+>**Teacher:** Badr TAJINI     
+>**Academic year:** 2025–2026  
+>**Program:** Data & Applications - Engineering - (FD)   
+>**Course:** Data Engineering I  
+---
+
 ## Objective
 Dans ce travail, on continue à exploiter le data warehouse construit dans l’Assignment 2.
 On réalise une analyse des données avec SQL et PySpark DataFrames,

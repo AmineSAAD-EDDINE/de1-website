@@ -1,5 +1,12 @@
 # Assignment 2 – Spark ETL & Data Warehouse
 
+>**Students:** Maxence DELEHELLE, Amine SAAD-EDDINE   
+>**Teacher:** Badr TAJINI     
+>**Academic year:** 2025–2026  
+>**Program:** Data & Applications - Engineering - (FD)   
+>**Course:** Data Engineering I  
+---
+
 ## Objective
 L’objectif de ce travail est d’explorer un schéma opérationnel e-commerce
 et de construire un mini data warehouse à l’aide de Spark.
