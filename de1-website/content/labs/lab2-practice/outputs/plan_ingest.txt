@@ -1,0 +1,12 @@
+2025-12-30 13:25:21.169985
+AdaptiveSparkPlan isFinalPlan=false
++- HashAggregate(keys=[order_id#79], functions=[], output=[order_id#79])
+   +- Exchange hashpartitioning(order_id#79, 200), ENSURE_REQUIREMENTS, [plan_id=412]
+      +- HashAggregate(keys=[order_id#79], functions=[], output=[order_id#79])
+         +- Project [order_id#79]
+            +- BroadcastHashJoin [order_id#79], [order_id#83], Inner, BuildLeft, false
+               :- BroadcastExchange HashedRelationBroadcastMode(List(cast(input[0, int, false] as bigint)),false), [plan_id=407]
+               :  +- Filter isnotnull(order_id#79)
+               :     +- FileScan csv [order_id#79] Batched: false, DataFilters: [isnotnull(order_id#79)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/lab2_orders.csv], PartitionFilters: [], PushedFilters: [IsNotNull(order_id)], ReadSchema: struct<order_id:int>
+               +- Filter isnotnull(order_id#83)
+                  +- FileScan csv [order_id#83] Batched: false, DataFilters: [isnotnull(order_id#83)], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/lab2_order_items.csv], PartitionFilters: [], PushedFilters: [IsNotNull(order_id)], ReadSchema: struct<order_id:int>
