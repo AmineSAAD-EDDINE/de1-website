@@ -1,0 +1,19 @@
+paths:
+  raw_csv_glob: "data/parking_violation.csv"
+  bronze: "outputs/project/bronze/"
+  silver: "outputs/project/silver/"
+  gold: "outputs/project/gold/"
+  proof: "proof/"
+
+layout:
+  partition_by: 
+    - "date"
+
+slos:
+  freshness_hours: 2
+  query_latency_q1_seconds: 4
+  storage_reduction_ratio: 0.6
+
+schema:
+  enforce_types: true
+  drop_nulls: true
