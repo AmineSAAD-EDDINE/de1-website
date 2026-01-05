@@ -1,0 +1,8 @@
+2026-01-02 10:58:10.476845
+AdaptiveSparkPlan isFinalPlan=false
++- HashAggregate(keys=[year#326, month#327, Vehicle_Make#282], functions=[count(metric#383)], output=[year#326, month#327, Vehicle_Make#282, violations_by_make#575L])
+   +- Exchange hashpartitioning(year#326, month#327, Vehicle_Make#282, 200), ENSURE_REQUIREMENTS, [plan_id=592]
+      +- HashAggregate(keys=[year#326, month#327, Vehicle_Make#282], functions=[partial_count(metric#383)], output=[year#326, month#327, Vehicle_Make#282, count#634L])
+         +- Project [Vehicle_Make#282, year#326, month#327, cast(Violation_Code#280 as double) AS metric#383]
+            +- Filter atleastnnonnulls(2, cast(Violation_Code#280 as double), cast(gettimestamp(Issue_Date#279, MM/dd/yyyy, TimestampType, try_to_timestamp, Some(Europe/Paris), true) as date))
+               +- FileScan csv [Issue_Date#279,Violation_Code#280,Vehicle_Make#282,year#326,month#327] Batched: false, DataFilters: [atleastnnonnulls(2, cast(Violation_Code#280 as double), cast(gettimestamp(Issue_Date#279, MM/dd/..., Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/data/parking_violation.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<Issue_Date:string,Violation_Code:string,Vehicle_Make:string,year:string,month:string>
