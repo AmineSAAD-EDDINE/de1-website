@@ -1,0 +1,8 @@
+2026-01-02 10:58:10.453382
+AdaptiveSparkPlan isFinalPlan=false
++- HashAggregate(keys=[date#384], functions=[sum(metric#383)], output=[date#384, sum_metric#439])
+   +- Exchange hashpartitioning(date#384, 200), ENSURE_REQUIREMENTS, [plan_id=558]
+      +- HashAggregate(keys=[date#384], functions=[partial_sum(metric#383)], output=[date#384, sum#498])
+         +- Project [cast(Violation_Code#280 as double) AS metric#383, cast(gettimestamp(Issue_Date#279, MM/dd/yyyy, TimestampType, try_to_timestamp, Some(Europe/Paris), true) as date) AS date#384]
+            +- Filter atleastnnonnulls(2, cast(Violation_Code#280 as double), cast(gettimestamp(Issue_Date#279, MM/dd/yyyy, TimestampType, try_to_timestamp, Some(Europe/Paris), true) as date))
+               +- FileScan csv [Issue_Date#279,Violation_Code#280] Batched: false, DataFilters: [atleastnnonnulls(2, cast(Violation_Code#280 as double), cast(gettimestamp(Issue_Date#279, MM/dd/..., Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/home/maxence/Documents/data_engineering/data/parking_violation.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct<Issue_Date:string,Violation_Code:string>
